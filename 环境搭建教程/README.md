@@ -155,7 +155,7 @@ kubeadm join 192.168.236.111:6443 --token qbyryh.ujdfcmiel3skikt1 \
 ```
 
 # 主节点执行上传  
-上传文件yaml文件，为docs里面的文件
+上传文件yaml文件，为[docs](docs/)里面的文件
 ```
 apt install lrzsz -y
 mkdir /home/tools
