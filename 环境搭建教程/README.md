@@ -208,5 +208,7 @@ kubectl taint node ek8s-master01 node-role.kubernetes.io/control-plane-
 # 从节点网络如果访问不了外网先排查是不是dns问题
 dns 永久修改，虚拟机的dns一般为你的子网2地址，eg.192.168.236.2
 ```
-echo "DNS=你的dns地址"
+echo "DNS=你的dns地址" >> /etc/systemd/resolved.conf
+systemctl restart systemd-resolved
+systemctl enable systemd-resolved
 ```
